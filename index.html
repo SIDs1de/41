@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+  <title>Kwork</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin-top: 270px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <style>
+    .imt {
+      background-color: #f4f4f4;
+      width: 100%;
+    }
+
+    .imt * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    .imt__container {
+      padding: 56px 0 68px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .imt__inner {
+      margin: 0 auto;
+      max-width: 668px;
+    }
+
+    .imt__title {
+      font-size: 28px;
+      margin: 0 auto;
+      margin-bottom: 8px;
+      text-align: center;
+      max-width: 500px;
+      font-weight: 700;
+    }
+
+    .imt__text {
+      max-width: 600px;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 18px;
+      margin-bottom: 28px;
+    }
+
+    .imt__text--mini {
+      max-width: 780px;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    .imt__text-link {
+      text-decoration: none;
+      transition: .15s;
+      color: #8012ea;
+      position: relative;
+    }
+
+    .imt__text-link::before {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 0%;
+      transform: translateX(-50%);
+      height: 1px;
+      background-color: #5400a3;
+      transition: .2s;
+    }
+
+    .imt__text-link:hover::before {
+      width: 100%;
+    }
+
+    .imt__text-link:hover {
+      color: #5400a3;
+    }
+
+    .imt__form {
+      margin-left: -65px;
+      margin-right: -65px;
+    }
+
+    .imt__labels {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .imt__label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1 0 33.33%;
+    }
+
+    .imt__label-title {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .imt__label-input {
+      padding: 0;
+      margin: 0;
+      margin: 0 10px;
+      padding: 0 12px;
+      width: 53px;
+      text-align: center;
+      height: 40px;
+      border: 1px solid #b2b2b2;
+      border-radius: 16px;
+      font-weight: 700;
+      font-size: 18px;
+      outline: none;
+      transition: .2s;
+    }
+
+    .imt__label-input:focus {
+      border-color: #cfbdff;
+    }
+
+    .imt__label-input::placeholder {
+      text-align: center;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .imt__label-um {
+      font-size: 18px;
+    }
+
+    .imt__btn-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .imt__btn {
+      padding: 16px 19px;
+      background-color: #d7c5ff;
+      border: 1px solid #d7c5ff;
+      color: #8012ea;
+      border-radius: 12px;
+      font-weight: 700;
+      margin: 0 auto;
+      font-size: 20px;
+      margin-top: 28px;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .imt__btn:hover {
+      color: #5f1b9e;
+      background-color: #cfb9ff;
+      border: 1px solid #cfb9ff;
+    }
+
+    .imt__btn:active {
+      transition: 0s;
+      transform: scale(0.97);
+    }
+
+    .imt__num {
+      font-size: 24px;
+    }
+
+    .imt__num span {
+      font-weight: 700;
+    }
+
+    ._none {
+      display: none !important;
+    }
+
+    .imt__btn-href {
+      text-decoration: none;
+    }
+
+    .imt__purpose span {
+      font-weight: 700;
+    }
+
+    .imt__images {
+      display: flex;
+      align-items: center;
+      max-width: 1306px;
+      margin: 0 auto;
+      padding: 0 15px;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    .imt__image-wrapper:nth-child(1) .imt__image-inner {
+      border-radius: 15px;
+      padding: 15px 12px;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .imt__image-wrapper+.imt__image-wrapper {
+      margin-left: 50px;
+    }
+
+    .imt__image-wrapper {
+      flex: 1 0 50%;
+      display: flex;
+    }
+
+    .imt__image-wrapper:nth-child(1) .imt__big-img {
+      max-width: 507px;
+    }
+
+    .imt__image-wrapper:nth-child(2) .imt__big-img {
+      max-width: 268px;
+      padding-left: 20px;
+      padding-right: 50px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .imt__answer {
+      /* margin: 0; */
+    }
+
+    .imt__image-inner {
+      position: relative;
+    }
+
+    .imt__image-text-wrapper {
+      position: absolute;
+      font-weight: 700;
+      font-size: 12px;
+      width: 150px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .imt__image-value-wrapper {
+      position: absolute;
+      font-weight: 700;
+      font-size: 18px;
+      width: 100px;
+      display: flex;
+    }
+
+    .imt__image-value-wrapper:nth-of-type(1) {
+      top: 14%;
+      left: 24%;
+    }
+
+    .imt__image-value-wrapper:nth-of-type(2) {
+      top: 54.3%;
+      left: 75.6%;
+    }
+
+    .imt__image-text-wrapper:nth-child(odd) {
+      justify-content: start;
+    }
+
+    .imt__image-text-wrapper:nth-of-type(1) {
+      top: 13.8%;
+      left: -47%;
+    }
+
+    .imt__image-text-wrapper:nth-of-type(2) {
+      top: 15%;
+      left: 105%;
+    }
+
+    .imt__image-text-wrapper:nth-of-type(3) {
+      top: 37.8%;
+      left: -50%;
+    }
+
+    .imt__image-text-wrapper:nth-of-type(4) {
+      top: 48.5%;
+      left: 105%;
+    }
+
+    .imt__image-text-wrapper:nth-of-type(5) {
+      top: 67.6%;
+      left: -60%;
+    }
+
+    @media (max-width: 1450px) {
+      .imt__image-wrapper {
+        flex: 1 1 auto;
+        margin-left: 0 !important;
+      }
+    }
+
+    @media (max-width: 1185px) {
+      .imt__images {
+        flex-direction: column;
+      }
+
+      .imt__image-wrapper+.imt__image-wrapper {
+        margin-top: 50px;
+      }
+    }
+
+    @media (max-width: 830px) {
+      .imt__form {
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+
+      .imt__label-title {
+        font-size: 16px;
+      }
+
+      .imt__label-input {
+        padding-left: 6px;
+        padding-right: 6px;
+        margin-left: 6px;
+        margin-right: 6px;
+        width: 43px;
+        height: 36px;
+      }
+
+      .imt__label-input {
+        font-size: 16px;
+      }
+
+      .imt__label-input::placeholder {
+        font-size: 16px;
+      }
+
+      .imt__label-um {
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .imt__image-wrapper:nth-child(2) {
+        max-width: 40%;
+      }
+
+      .imt__image-text {
+        font-size: 11px;
+      }
+
+      .imt__image-text-wrapper {
+        width: 130px;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(1) {
+        top: 13.8%;
+        left: -57%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(2) {
+        top: 15%;
+        left: 105%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(3) {
+        top: 37.8%;
+        left: -60%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(4) {
+        top: 48.5%;
+        left: 105%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(5) {
+        top: 67.6%;
+        left: -70%;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .imt__image-wrapper:nth-child(2) {
+        max-width: 40%;
+      }
+
+      .imt__image-text {
+        font-size: 11px;
+      }
+
+      .imt__image-text-wrapper {
+        width: 130px;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(1) {
+        top: 13%;
+        left: -67%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(2) {
+        top: 14.3%;
+        left: 105%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(3) {
+        top: 37.2%;
+        left: -70%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(4) {
+        top: 47.8%;
+        left: 105%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(5) {
+        top: 66.85%;
+        left: -80%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .imt__image-wrapper:nth-child(2) {
+        max-width: 40%;
+      }
+
+      .imt__image-text {
+        font-size: 10px;
+      }
+
+      .imt__image-text-wrapper {
+        width: 120px;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(1) {
+        top: 13%;
+        left: -77%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(2) {
+        top: 14.3%;
+        left: 105%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(3) {
+        top: 37.2%;
+        left: -80%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(4) {
+        top: 47.8%;
+        left: 105%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(5) {
+        top: 66.85%;
+        left: -90%;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .imt__num {
+        font-size: 20px;
+      }
+
+      .imt__image-value {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .imt__image-wrapper:nth-child(2) {
+        max-width: 40%;
+      }
+
+      .imt__image-text {
+        font-size: 11px;
+      }
+
+      .imt__image-text-wrapper {
+        width: 100px;
+      }
+
+      .imt__image-text-wrapper {
+        transform: translateY(-50%);
+      }
+
+      .imt__image-text-wrapper:nth-of-type(1) {
+        top: 15%;
+        left: -77%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(2) {
+        top: 16%;
+        left: 105%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(3) {
+        top: 39%;
+        left: -80%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(4) {
+        top: 50%;
+        left: 105%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(5) {
+        top: 68%;
+        left: -84%;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .imt__image-wrapper:nth-child(2) {
+        max-width: 40%;
+      }
+
+      .imt__image-text {
+        font-size: 11px;
+      }
+
+      .imt__image-text-wrapper {
+        width: 100px;
+      }
+
+      .imt__image-text-wrapper {
+        transform: translateY(-50%);
+      }
+
+      .imt__image-text-wrapper:nth-of-type(1) {
+        top: 15%;
+        left: -77%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(2) {
+        top: 16%;
+        left: 105%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(3) {
+        top: 39%;
+        left: -80%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(4) {
+        top: 50%;
+        left: 105%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(5) {
+        top: 68%;
+        left: -88%;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .imt__btn {
+        font-size: 18px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+    }
+
+    @media (max-width: 370px) {
+      .imt__image-wrapper:nth-child(2) {
+        max-width: 40%;
+      }
+
+      .imt__image-text {
+        font-size: 11px;
+      }
+
+      .imt__image-text-wrapper {
+        width: 100px;
+      }
+
+      .imt__image-text-wrapper {
+        transform: translateY(-50%);
+      }
+
+      .imt__image-text-wrapper:nth-of-type(1) {
+        top: 15%;
+        left: -77%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(2) {
+        top: 16%;
+        left: 105%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(3) {
+        top: 39%;
+        left: -80%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(4) {
+        top: 50%;
+        left: 105%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(5) {
+        top: 68%;
+        left: -90%;
+      }
+    }
+
+    @media (max-width: 335px) {
+      .imt__image-wrapper:nth-child(2) {
+        max-width: 40%;
+      }
+
+      .imt__image-text {
+        font-size: 11px;
+      }
+
+      .imt__image-text-wrapper {
+        width: 100px;
+      }
+
+      .imt__image-text-wrapper {
+        transform: translateY(-50%);
+      }
+
+      .imt__image-text-wrapper:nth-of-type(1) {
+        top: 15%;
+        left: -82%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(2) {
+        top: 16%;
+        left: 105%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(3) {
+        top: 39%;
+        left: -85%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(4) {
+        top: 50%;
+        left: 105%;
+      }
+
+      .imt__image-text-wrapper:nth-of-type(5) {
+        top: 68%;
+        left: -93%;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .imt__image-text {
+        font-size: 10px;
+      }
+
+      html {
+        overflow-x: hidden;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .imt__labels {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        display: inline-flex;
+        margin: 0 auto;
+      }
+
+      .imt__answer {
+        margin-top: 30px;
+      }
+
+      .imt__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      .imt__label-input {
+        order: 0;
+        margin-left: 0;
+      }
+
+      .imt__label-um {
+        order: 1;
+        margin-right: 8px;
+        width: 21px;
+      }
+
+      .imt__label-title {
+        order: 2;
+      }
+
+      .imt__label+.imt__label {
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .imt__title {
+        font-size: 20px;
+      }
+
+      .imt__text {
+        font-size: 16px;
+      }
+
+      .imt__text-link::before {
+        display: none;
+      }
+
+      .imt__label-title {
+        font-size: 16px;
+      }
+
+      .imt__label-input {
+        font-size: 16px;
+      }
+
+      .imt__label-input::placeholder {
+        font-size: 16px;
+      }
+
+      .imt__label-um {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .imt__text--mini {
+        text-align: left;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .imt__text {
+        margin-bottom: 20px;
+      }
+      .imt__answer {
+        margin-top: 24px;
+        margin-bottom: 16px;
+      }
+      .imt__btn {
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 340px) {
+      .imt__btn {
+        padding-left: 14px;
+        padding-right: 14px;
+        font-size: 16px;
+      }
+    }
+  </style>
+
+  <div class="imt">
+    <div class="imt__container">
+      <div class="imt__inner">
+        <h2 class="imt__title">
+          Рассчитать ИМТ
+        </h2>
+        <p class="imt__text">
+          Текст текст текст текст текст текст текст <a class='imt__text-link' href='#'>ссылка ссылка ссылка</a> текст
+          текст текст <a class='imt__text-link' href='#'>ссылка</a> текст текст текст текст
+        </p>
+        <form class="imt__form">
+          <div class="imt__labels">
+            <label class="imt__label">
+              <span class="imt__label-title">Рост</span>
+              <input class="imt__label-input" type="text" placeholder='см'>
+              <span class="imt__label-um">см</span>
+            </label>
+            <label class="imt__label">
+              <span class="imt__label-title">Вес</span>
+              <input class="imt__label-input" type="text" placeholder='кг'>
+              <span class="imt__label-um">кг</span>
+            </label>
+            <label class="imt__label">
+              <span class="imt__label-title">Желаемый вес</span>
+              <input class="imt__label-input" type="text" placeholder='кг'>
+              <span class="imt__label-um">кг</span>
+            </label>
+          </div>
+          <div class="imt__text imt__answer">
+          </div>
+          <div class="imt__text imt__purpose _none">
+          </div>
+          <div class="imt__text _none">
+            Для долгосрочных изменений вам нужны и мотивация, и время. У Название есть все необходимые инструменты, и он
+            может помочь вам в этом.
+          </div>
+          <div class="imt__btn-wrapper">
+            <button class="imt__btn" type='submit'>
+              Рассчитать результат
+            </button>
+            <a class="imt__btn _none imt__btn-href" href="#">
+              Я хочу достичь своей цели
+            </a>
+
+          </div>
+
+        </form>
+
+
+      </div>
+      <div class="imt__images _none">
+        <div class="imt__image-wrapper">
+          <div class="imt__image-inner">
+            <img class='imt__big-image' src="chart.svg" alt="График">
+            <div class="imt__image-value-wrapper">
+              <p class='imt__image-value'>120 кг</p>
+            </div>
+            <div class="imt__image-value-wrapper">
+              <p class='imt__image-value'>110 кг</p>
+            </div>
+          </div>
+        </div>
+        <div class="imt__image-wrapper">
+          <div class="imt__image-inner">
+            <img class='imt__big-image' src="person.svg" alt="Человек">
+            <div class="imt__image-text-wrapper">
+              <p class='imt__image-text'>Часть тела часть тела</p>
+            </div>
+            <div class="imt__image-text-wrapper">
+              <p class='imt__image-text'>Часть часть тела</p>
+            </div>
+            <div class="imt__image-text-wrapper">
+              <p class='imt__image-text'>Часть тела часть тела</p>
+            </div>
+            <div class="imt__image-text-wrapper">
+              <p class='imt__image-text'>Часть тела часть тела</p>
+            </div>
+            <div class="imt__image-text-wrapper">
+              <p class='imt__image-text'>Часть тела часть тела</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="imt__text _none imt__text--mini">
+        *Похудение индивидуально индивидуально индивидуально индивидуально индивидуально индивидуально индивидуально
+        индивидуально индивидуально индивидуально индивидуально
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const imt = () => {
+        const isNumberKey = (evt) => {
+          var charCode = (evt.which) ? evt.which : evt.keyCode
+          if (charCode > 31 && (charCode < 48 || charCode > 57) || charCode === 13)
+            return false
+          return true
+        }
+
+        const getAnswer = (sm, kg, d_kg) => {
+
+          if (d_kg >= kg) {
+            return ['Желаемый вес не может быть больше действительного или равен ему', false]
+          }
+
+          const num = (kg / (sm ** 2)).toFixed(1)
+          if (sm && kg && d_kg) {
+            if (num <= 10 || num >= 50) {
+              return ['Введите реальные значения', false]
+            }
+            return [`<span class="imt__num">Ваш ИМТ <span>${num}</span></span>`, true]
+          } else {
+            return ['Заполните поля формы', false]
+          }
+
+
+        }
+
+        const inputs = document.querySelectorAll('.imt__label-input')
+        const form = document.querySelector('.imt__form')
+        const answerBlock = document.querySelector('.imt__answer')
+        const btn = document.querySelector('.imt__btn')
+        const btnHref = document.querySelector('.imt__btn-href')
+        const purposeBlock = document.querySelector('.imt__purpose')
+        const noneTexts = document.querySelectorAll('._none')
+        const valueWrappers = document.querySelectorAll('.imt__image-value')
+
+        const formSubmitted = (e) => {
+          e.preventDefault()
+
+          const sm = +inputs[0].value / 100
+          const kg = +inputs[1].value
+          const d_kg = +inputs[2].value
+
+          const [answText, answ] = getAnswer(sm, kg, d_kg)
+
+          answerBlock.innerHTML = answText
+
+          if (answ) {
+            btn.style.display = 'none'
+            btnHref.style.display = 'block'
+            purposeBlock.innerHTML = `Вы сможете достичь своей цели к <span>${moment().locale('ru').add(6, 'weeks').format('D MMMM YYYY')}*</span>`
+
+            valueWrappers[0].innerHTML = `${kg} кг`
+            valueWrappers[1].innerHTML = `${d_kg} кг`
+
+            noneTexts.forEach(text => {
+              text.classList.remove('_none')
+            })
+          }
+        }
+
+        form.addEventListener('submit', (e) => {
+          formSubmitted(e)
+        })
+
+        inputs.forEach(input => {
+          input.addEventListener('keypress', (e) => {
+            e.preventDefault()
+            if (e.charCode === 13) {
+              formSubmitted(e)
+            }
+            if (input.value.length === 3) {
+              return
+            } else if (input.value.length > 3) {
+              input.value = ''
+            }
+            if (isNumberKey(e)) {
+              input.value += e.key
+            }
+          })
+        })
+      }
+      imt()
+    })
+  </script>
+
+  <script src='https://momentjs.com/downloads/moment-with-locales.min.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<svg width="507.771790" height="351.950012" viewBox="0 0 507.772 351.95" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<linearGradient id="paint_linear_2_3_0" x1="257.006042" y1="322.799622" x2="61.039566" y2="51.376663" gradientUnits="userSpaceOnUse">
+			<stop offset="0.001445" stop-color="#CCCCCC" stop-opacity="0.600000"/>
+			<stop offset="0.999800" stop-color="#ED1C24" stop-opacity="0.200000"/>
+		</linearGradient>
+		<linearGradient id="paint_linear_2_29_0" x1="5.278923" y1="174.714172" x2="507.769928" y2="174.714172" gradientUnits="userSpaceOnUse">
+			<stop offset="0.001445" stop-color="#ED1C24"/>
+			<stop offset="0.999300" stop-color="#39B54A"/>
+		</linearGradient>
+	</defs>
+	<g opacity="0.490000">
+		<path id="path" d="M5.35004 50.99L5.35004 345.78L507.09 345.78L507.09 297.64C469.92 263.01 435.89 241.35 391.37 224.15C354.2 209.79 288.88 208.1 248.45 190.9C185.23 164.01 174.12 105.65 116.85 72.11C80.06 50.56 28.38 52.6 5.35004 50.99Z" fill="url(#paint_linear_2_3_0)" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+	<path id="polyline" d="" fill="#000000" fill-opacity="0" fill-rule="nonzero"/>
+	<path id="polyline" d="M5.35004 0L5.35004 346.32L507.09 346.32" stroke="#1A1A1A" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<path id="path" d="" fill="#000000" fill-opacity="0" fill-rule="nonzero"/>
+	<path id="path" d="M5.35004 51.52C28.38 53.14 80.06 51.09 116.85 72.64C174.12 106.18 185.23 164.54 248.45 191.43C288.89 208.63 354.21 210.32 391.37 224.68C435.89 241.88 469.93 263.54 507.09 298.17" stroke="url(#paint_linear_2_29_0)" stroke-opacity="1.000000" stroke-width="2.000000"/>
+	<ellipse id="circle" cx="95.510025" cy="63.049995" rx="7.020004" ry="7.019997" fill="#ED1C24" fill-opacity="1.000000"/>
+	<ellipse id="circle" cx="366.030029" cy="217.660004" rx="7.020004" ry="7.019997" fill="#39B54A" fill-opacity="1.000000"/>
+	<line id="line" x1="5.350037" y1="341.250000" x2="5.350037" y2="351.949982" stroke="#1A1A1A" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<line id="line" x1="0.000000" y1="346.320007" x2="10.700012" y2="346.320007" stroke="#1A1A1A" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<line id="line" x1="65.740021" y1="341.250000" x2="65.740021" y2="351.949982" stroke="#1A1A1A" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<line id="line" x1="0.000000" y1="285.919983" x2="10.700012" y2="285.919983" stroke="#1A1A1A" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<line id="line" x1="0.000000" y1="230.600006" x2="10.700012" y2="230.600006" stroke="#1A1A1A" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<line id="line" x1="0.000000" y1="175.269989" x2="10.700012" y2="175.269989" stroke="#1A1A1A" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<line id="line" x1="0.000000" y1="119.940002" x2="10.700012" y2="119.940002" stroke="#1A1A1A" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<line id="line" x1="0.000000" y1="64.619995" x2="10.700012" y2="64.619995" stroke="#1A1A1A" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<line id="line" x1="126.140015" y1="341.250000" x2="126.140015" y2="351.949982" stroke="#1A1A1A" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<line id="line" x1="186.530029" y1="341.250000" x2="186.530029" y2="351.949982" stroke="#1A1A1A" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<line id="line" x1="246.929993" y1="341.250000" x2="246.929993" y2="351.949982" stroke="#1A1A1A" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<line id="line" x1="307.320007" y1="341.250000" x2="307.320007" y2="351.949982" stroke="#1A1A1A" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<line id="line" x1="367.720032" y1="341.250000" x2="367.720032" y2="351.949982" stroke="#1A1A1A" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<line id="line" x1="428.110046" y1="341.250000" x2="428.110046" y2="351.949982" stroke="#1A1A1A" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<line id="line" x1="487.720032" y1="341.250000" x2="487.720032" y2="351.949982" stroke="#1A1A1A" stroke-opacity="1.000000" stroke-width="1.000000"/>
+</svg>
