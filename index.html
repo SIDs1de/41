@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      margin-top: 270px;
+      margin-top: 200px;
     }
   </style>
 </head>
@@ -160,7 +160,7 @@
       font-weight: 700;
       margin: 0 auto;
       font-size: 20px;
-      margin-top: 28px;
+      margin-top: 10px;
       cursor: pointer;
       transition: .2s;
     }
@@ -237,6 +237,10 @@
 
     .imt__answer {
       /* margin: 0; */
+    }
+
+    .imt__answer--none {
+      display: none;
     }
 
     .imt__image-inner {
@@ -678,6 +682,14 @@
         margin: 0 auto;
       }
 
+      .imt__purpose + .imt__text {
+        margin-bottom: 0;
+      }
+
+      .imt__btn {
+        margin-top: 18px;
+      }
+
       .imt__answer {
         margin-top: 30px;
       }
@@ -756,7 +768,7 @@
         margin-bottom: 16px;
       }
       .imt__btn {
-        margin-top: 10px;
+        margin-top: 18px;
       }
     }
 
@@ -797,7 +809,7 @@
               <span class="imt__label-um">кг</span>
             </label>
           </div>
-          <div class="imt__text imt__answer">
+          <div class="imt__text imt__answer imt__answer--none">
           </div>
           <div class="imt__text imt__purpose _none">
           </div>
@@ -876,6 +888,9 @@
           if (d_kg >= kg) {
             return ['Желаемый вес не может быть больше действительного или равен ему', false]
           }
+          if (kg - 30 >= d_kg) {
+            return ['Слишком маленький желаемый вес относительно изначального', false]
+          }
 
           const num = (kg / (sm ** 2)).toFixed(1)
           if (sm && kg && d_kg) {
@@ -909,6 +924,7 @@
           const [answText, answ] = getAnswer(sm, kg, d_kg)
 
           answerBlock.innerHTML = answText
+          answerBlock.classList.remove('imt__answer--none')
 
           if (answ) {
             btn.style.display = 'none'
