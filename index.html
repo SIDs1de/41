@@ -682,7 +682,7 @@
         margin: 0 auto;
       }
 
-      .imt__purpose + .imt__text {
+      .imt__purpose+.imt__text {
         margin-bottom: 0;
       }
 
@@ -763,10 +763,12 @@
       .imt__text {
         margin-bottom: 20px;
       }
+
       .imt__answer {
         margin-top: 24px;
         margin-bottom: 16px;
       }
+
       .imt__btn {
         margin-top: 18px;
       }
@@ -876,11 +878,24 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const imt = () => {
-        const isNumberKey = (evt) => {
-          var charCode = (evt.which) ? evt.which : evt.keyCode
-          if (charCode > 31 && (charCode < 48 || charCode > 57) || charCode === 13)
-            return false
-          return true
+        const isNumberKey = (s) => {
+          // var keyCode = (evt.which) ? evt.which : evt.keyCode
+          // if (keyCode > 31 && (keyCode < 48 || keyCode > 57) || keyCode === 13 || keyCode === 46 || keyCode === 8)
+          //   return false
+          // return true
+
+          s = s.toLowerCase()
+          // if (key.length !== 1) {
+          //   return
+          // }
+
+          const isLetter = (s >= 'a' && s <= 'z')
+          const isNumber = (s >= '0' && s <= '9')
+
+          if (isNumber) {
+            return true
+          }
+          return false
         }
 
         const getAnswer = (sm, kg, d_kg) => {
@@ -888,13 +903,33 @@
           if (d_kg >= kg) {
             return ['Желаемый вес не может быть больше действительного или равен ему', false]
           }
-          if (kg - 30 >= d_kg) {
+          if (kg - 50 >= d_kg) {
             return ['Слишком маленький желаемый вес относительно изначального', false]
           }
 
+          if ((sm * 100) > 272) {
+            return ['Указан слишком большой рост', false]
+          }
+
+          if ((sm * 100) < 64.7) {
+            return ['Указан слишком маленький рост', false]
+          }
+
+          if (kg > 635) {
+            return ['Указан слишком большой вес', false]
+          }
+
+          if (kg < 14.5) {
+            return ['Указан слишком маленький вес', false]
+          }
+
           const num = (kg / (sm ** 2)).toFixed(1)
+          const d_num = (d_kg / (sm ** 2)).toFixed(1)
           if (sm && kg && d_kg) {
             if (num <= 10 || num >= 50) {
+              return ['Введите реальные значения', false]
+            }
+            if (d_num <= 10 || d_num >= 50) {
               return ['Введите реальные значения', false]
             }
             return [`<span class="imt__num">Ваш ИМТ <span>${num}</span></span>`, true]
@@ -945,19 +980,27 @@
         })
 
         inputs.forEach(input => {
-          input.addEventListener('keypress', (e) => {
-            e.preventDefault()
-            if (e.charCode === 13) {
-              formSubmitted(e)
+          input.addEventListener('input', (e) => {
+            // e.preventDefault()
+            // if (e.keyCode === 13) {
+            //   formSubmitted(e)
+            // }
+            // if (e.keyCode === 46) {
+            //   input.value = input.value.substring(0, input.value.length - 1)
+            // }
+            // if (e.keyCode === 8) {
+            //   input.value = input.value.substring(0, input.value.length - 1)
+            // }
+            for (let i = 0; i < input.value.length; i++) {
+              const s = input.value[i]
+              if (!isNumberKey(s)) {
+                input.value = input.value.slice(0, i) + input.value.slice(i + 1)
+              }
             }
-            if (input.value.length === 3) {
-              return
-            } else if (input.value.length > 3) {
-              input.value = ''
+            if (input.value.length > 3) {
+              input.value = input.value.substring(0, 3)
             }
-            if (isNumberKey(e)) {
-              input.value += e.key
-            }
+
           })
         })
       }
